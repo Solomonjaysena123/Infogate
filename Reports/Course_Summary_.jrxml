@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Course_Summary_" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3808d170-1ac5-48ca-a4d1-f32a81c4eef8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM `db_aims_api#sl`.tbl_course;]]>
+	</queryString>
+	<field name="courseID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CCode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="InsName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CDuration" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CFee" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="created_at" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="updated_at" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="116" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="70" width="225" height="32" uuid="ea6489e6-e53b-464e-a67a-83f9f9f973eb"/>
+				<textElement textAlignment="Justified">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[ICT Institute - Polonnaruwa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="10" width="338" height="50" uuid="65e3a8a5-39ac-4987-af42-922749fa8988"/>
+				<textElement textAlignment="Justified">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Instructor Details Summary]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="652" y="0" width="100" height="20" uuid="5b1cdb18-2614-45bc-b4bf-d9eeb5fb3b0c"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Page Number :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="702" y="0" width="100" height="20" uuid="b66f973f-4c86-48ef-a89f-64cd5b4b8da9"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="52" height="20" uuid="a70fc0d2-8051-4012-8dfe-b9a0efbc3ffd"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="0" width="75" height="20" uuid="9b1169f4-f838-426b-b0ae-606d07aa7960"/>
+				<text><![CDATA[Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="0" width="201" height="20" uuid="3d9ceea9-9a54-46a5-8fb3-25e0d10908a8"/>
+				<text><![CDATA[C/Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="348" y="0" width="100" height="20" uuid="679e906a-f77e-45d1-93ac-8a5e66864e52"/>
+				<text><![CDATA[Duration]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="478" y="0" width="100" height="20" uuid="78225902-7555-41bc-87be-9a9aa0f09e8c"/>
+				<text><![CDATA[Fee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="602" y="0" width="100" height="20" uuid="76926564-ea43-483b-9952-a3587545ff0f"/>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="52" height="20" uuid="14caa0df-b634-4974-b1f1-7a6f50ae10fa"/>
+				<textFieldExpression><![CDATA[$F{courseID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="52" y="0" width="75" height="20" uuid="2dec427f-05e3-4359-a306-63c9054d0fcd"/>
+				<textFieldExpression><![CDATA[$F{CCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="0" width="201" height="20" uuid="b7021d8d-08ae-4cc3-a0d8-4695de22791d"/>
+				<textFieldExpression><![CDATA[$F{CName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="0" width="100" height="20" uuid="51352795-bc52-4823-9026-bacd700896b0"/>
+				<textFieldExpression><![CDATA[$F{CDuration}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="478" y="0" width="100" height="20" uuid="b17e2a64-dd9b-42cc-be81-e3bdd6d3a0d6"/>
+				<textFieldExpression><![CDATA[$F{CFee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="602" y="0" width="100" height="20" uuid="480c1e95-07a5-4e42-8058-6d8e66676c63"/>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="0" y="34" width="100" height="20" uuid="c04fef3a-0aea-49a5-813d-cec4e9f24d54"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="682" y="34" width="80" height="20" uuid="8eb846b7-fc38-4e53-b214-ca5c0930723b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="762" y="34" width="40" height="20" uuid="2dd7c80b-56a7-4b18-908c-e8e30e987afc"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

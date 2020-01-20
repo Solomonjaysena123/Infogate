@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Vacancy_Details" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="15e9f2ff-e5c0-442f-8fef-a9e649a15727">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM `db_aims_api#sl`.tbl_addvacancies;]]>
+	</queryString>
+	<field name="vacancyID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="JobTittle" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Odate" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cdate" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jdescription" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Lskill" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Qualification" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="117" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="20" width="338" height="50" uuid="b4b162eb-2004-4df1-bb67-1197cab2a52b"/>
+				<textElement textAlignment="Justified">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Instructor Details Summary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="80" width="225" height="32" uuid="edd23aaa-3df1-45d3-ac1e-c7c93622f92f"/>
+				<textElement textAlignment="Justified">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[ICT Institute - Polonnaruwa]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="43" height="20" uuid="dd1fe0ab-85f1-4a36-847d-b56ba9e11f52"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="0" width="100" height="20" uuid="a105af08-2847-4232-aaca-3b8dc7a3d837"/>
+				<text><![CDATA[JobTittle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="0" width="68" height="20" uuid="f86680b1-84a8-4443-a1e7-4680cf66bfc5"/>
+				<text><![CDATA[Opening Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="0" width="74" height="20" uuid="8d945478-7905-4483-8fab-8815dbde37fa"/>
+				<text><![CDATA[Close Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="100" height="20" uuid="4c70de4d-68c3-40d1-b36b-b43b98edd286"/>
+				<text><![CDATA[Job Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="458" y="2" width="100" height="20" uuid="73266d19-cd3b-4dea-9616-bf6ded25e2e6"/>
+				<text><![CDATA[Qualification]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="8" width="43" height="20" uuid="c33b8c80-2f13-42c2-83c3-0a54b610da3d"/>
+				<textFieldExpression><![CDATA[$F{vacancyID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="8" width="100" height="20" uuid="c5b2eba1-05eb-4c7f-8ba6-a8c2fecbb5af"/>
+				<textFieldExpression><![CDATA[$F{JobTittle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="8" width="68" height="20" uuid="046f4531-fbab-443f-97f5-57eb02dbfbbd"/>
+				<textFieldExpression><![CDATA[$F{Odate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="8" width="74" height="20" uuid="ccc8b1a8-2913-420e-9aa3-ed98a0e446bb"/>
+				<textFieldExpression><![CDATA[$F{Cdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="8" width="100" height="20" uuid="dc32a316-eb4e-4937-9a6a-d4cfe8ab6cf3"/>
+				<textFieldExpression><![CDATA[$F{Jdescription}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="458" y="8" width="100" height="20" uuid="e9049da6-54e8-4ed6-be89-cf2d046dd7f9"/>
+				<textFieldExpression><![CDATA[$F{Qualification}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="43" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="430" y="34" width="80" height="20" uuid="b8b9d16f-0182-41fc-afb6-f26b35c289ef"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="34" width="40" height="20" uuid="76069cba-7994-49bd-9c96-36edc97dfe70"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="0" y="34" width="100" height="20" uuid="44711e73-0c21-4c06-a808-1525bc190737"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
